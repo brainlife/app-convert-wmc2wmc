@@ -35,7 +35,7 @@ if __name__ == '__main__':
 	tract_dir = '%s/tracts' %src_dir
 	tracts = os.listdir(tract_dir)
 	count = len(tracts)
-	for i in range(1,2):
+	for i in range(1,count):
 		in_fname = '%s/%s.json' %(tract_dir, i)
 		out_fname = '%s/tracts/%s.json' %(out_dir, i)
 		with open(in_fname) as f:

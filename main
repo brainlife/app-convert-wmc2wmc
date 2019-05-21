@@ -2,10 +2,8 @@
 #PBS -k o
 #PBS -l nodes=1:ppn=1,walltime=00:05:00
 
-[ $PBS_O_WORKDIR ] && cd $PBS_O_WORKDIR
-
 mkdir wmc
-python convert_wmc2wmc.py
+singularity exec -e docker://brainlife/python:2.7.16 python convert_wmc2wmc.py
 
 if [ -z "$(ls -A -- "wmc")" ]; then    
 	echo "Conversion failed."

@@ -14,7 +14,7 @@ if __name__ == '__main__':
 	src_dir = os.path.dirname(segmentation_file)
 	out_dir = 'wmc'
 
-	sio.savemat("%s/classification.mat" %out_dir, {"classfication": old["classification"]})
+	sio.savemat("%s/classification.mat" %out_dir, {"classification": old["classification"]})
 	copytree('%s/tracts' %src_dir, '%s/tracts' %out_dir)
 	if os.path.exists('%s/surfaces' %src_dir):
 		copytree('%s/surfaces' %src_dir, '%s/surfaces' %out_dir)

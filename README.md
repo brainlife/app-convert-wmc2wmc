@@ -2,7 +2,7 @@
 [![Run on Brainlife.io](https://img.shields.io/badge/Brainlife-bl.app.201-blue.svg)](https://doi.org/10.25663/brainlife.app.201)
 
 # app-convert-wmc2wmc
-This App converts the White Matter Classification (WMC) structure deprecated datatype to the new WMC datatype. The main difference between the two datatypes is that, while the first one contains both the fiber indexes related to the original tractogram and the fiber coordinates (in the structure output.mat), the second one only contains the fiber indexes (in the structure classification.mat). For this reason, it is important that the new WMC datatype is always used in concomitance with the original tractogram, because it does not contain the fiber coordinates. 
+This App converts the White Matter Classification (WMC) structure deprecated datatype to the new WMC datatype. The main difference between the two datatypes is that, while the first one contains both the fiber indexes related to the original tractogram and the fiber coordinates (in the structure output.mat), the second one only contains the fiber indexes (in the structure classification.mat). For this reason, it is important that the new WMC datatype is always used in concomitance with the original tractogram. 
 
 ### Authors
 - [Giulia Bertò](giulia.berto.4@gmail.com)
@@ -11,7 +11,7 @@ This App converts the White Matter Classification (WMC) structure deprecated dat
 - [Soichi Hayashi](hayashis@iu.edu)
 
 ### Funding Acknowledgement
-brainlife.io is publicly funded and for the sustainability of the project it is helpful to Acknowledge the use of the platform. We kindly ask that you acknowledge the funding below in your publications and code reusing this code.
+We kindly ask that you acknowledge the funding below in your publications and code reusing this code.
 
 [![NSF-BCS-1734853](https://img.shields.io/badge/NSF_BCS-1734853-blue.svg)](https://nsf.gov/awardsearch/showAward?AWD_ID=1734853)
 [![NSF-BCS-1636893](https://img.shields.io/badge/NSF_BCS-1636893-blue.svg)](https://nsf.gov/awardsearch/showAward?AWD_ID=1636893)

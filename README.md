@@ -2,13 +2,7 @@
 [![Run on Brainlife.io](https://img.shields.io/badge/Brainlife-bl.app.201-blue.svg)](https://doi.org/10.25663/brainlife.app.201)
 
 # app-convert-wmc2wmc
-This is an example of how to write documentation (readme.md and license.md for Apps on brainlife.io)
-
-Write the following here...
-
-1) What the App does, and how it does it at the basic level.
-2) Briefly explain what 1) means for novice users in a language that 1st year psychology student can understand it.
-3) Briefly description of input / output files.
+This App converts the White Matter Classification (WMC) structure deprecated datatype to the new WMC datatype. The main difference between the two datatypes is that, while the first one contains both the fiber indexes related to the original tractogram and the fiber coordinates (in the structure output.mat), the second one only contains the fiber indexes (in the structure classification.mat). For this reason, it is important that the new WMC datatype is always used in concomitance with the original tractogram, because it does not contain the fiber coordinates. 
 
 ### Authors
 - [Giulia Bertò](giulia.berto.4@gmail.com)
@@ -43,7 +37,7 @@ You can submit this App online at [https://doi.org/10.25663/bl.app.201](https://
 
 ```json
 {
-        "segmentation": ".output.mat",
+        "segmentation": "./output.mat",
 }
 ```
 
@@ -53,48 +47,12 @@ You can submit this App online at [https://doi.org/10.25663/bl.app.201](https://
 ./main
 ```
 
-### Sample Datasets
-
-If you don't have your own input file, you can download sample datasets from Brainlife.io, or you can use [Brainlife CLI](https://github.com/brain-life/cli).
-
-```
-npm install -g brainlife
-bl login
-mkdir input
-bl dataset download 5a0e604116e499548135de87 && mv 5a0e604116e499548135de87 input/track
-bl dataset download 5a0dcb1216e499548135dd27 && mv 5a0dcb1216e499548135dd27 input/dtiinit
-```
-
 ## Output
 
-All output files will be generated under the current working directory (pwd). The main output of this App is a file called `output.mat`. This file contains following object.
-
-```
-fe = 
-
-    name: 'temp'
-    type: 'faseval'
-    life: [1x1 struct]
-      fg: [1x1 struct]
-     roi: [1x1 struct]
-    path: [1x1 struct]
-     rep: []
-```
-
-`output_fg.pdb` contains all fasicles with >0 weights withtin fg object (fibers)
-
-#### Product.json
-
-The secondary output of this app is `product.json`. This file allows web interfaces, DB and API calls on the results of the processing. 
+The relevant output for this application is a classification structure. The classification structure is a .mat file which contains a matlab structure (entitled classification) with two fields: names and index. The names field lists the names of tracts which were identified by this process as strings. The index field is a 1 dimensional vector containing zeros for all unidentified streamlines, and integer index values corresponding to streamlines' membership in the corresponding structure of the names vector.
 
 ### Dependencies
 
-This App only requires [singularity](https://www.sylabs.io/singularity/) to run. If you don't have singularity, you will need to install following dependencies.  
-
-  - Matlab: https://www.mathworks.com/products/matlab.html
-  - jsonlab: https://www.mathworks.com/matlabcentral/fileexchange/33381-jsonlab-a-toolbox-to-encode-decode-json-files
-  - VISTASOFT: https://github.com/vistalab/vistasoft/
-  - ENCODE: https://github.com/brain-life/encode
-  - MBA: https://github.com/francopestilli/mba
+This App only requires [singularity](https://www.sylabs.io/singularity/) to run.
 
 #### MIT Copyright (c) 2020 brainlife.io The University of Texas at Austin and Indiana University

@@ -11,11 +11,10 @@ Write the following here...
 3) Briefly description of input / output files.
 
 ### Authors
-- [Bradley Caron](bacaron@iu.edu)
-- [Soichi Hayashi](hayashis@iu.edu)
+- [Giulia Bertò](giulia.berto.4@gmail.com)
 
 ### Contributors
-- [Franco Pestilli](frakkopesto@gmail.com)
+- [Soichi Hayashi](hayashis@iu.edu)
 
 ### Funding Acknowledgement
 brainlife.io is publicly funded and for the sustainability of the project it is helpful to Acknowledge the use of the platform. We kindly ask that you acknowledge the funding below in your publications and code reusing this code.
@@ -29,16 +28,13 @@ brainlife.io is publicly funded and for the sustainability of the project it is 
 ### Citations
 We kindly ask that you cite the following articles when publishing papers and code using this code. 
 
-1. Avesani, P., McPherson, B., Hayashi, S. et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. Sci Data 6, 69 (2019). [https://doi.org/10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
-
-#### MIT Copyright (c) 2020 brainlife.io The University of Texas at Austin and Indiana University
-
+Avesani, P., McPherson, B., Hayashi, S. et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. Sci Data 6, 69 (2019). [https://doi.org/10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
 
 ## Running the App 
 
 ### On Brainlife.io
 
-You can submit this App online at [https://doi.org/10.25663/bl.app.1](https://doi.org/10.25663/bl.app.1) via the "Execute" tab.
+You can submit this App online at [https://doi.org/10.25663/bl.app.201](https://doi.org/10.25663/bl.app.201) via the "Execute" tab.
 
 ### Running Locally (on your machine)
 
@@ -47,12 +43,7 @@ You can submit this App online at [https://doi.org/10.25663/bl.app.1](https://do
 
 ```json
 {
-        "track": "./input/track/track.tck",
-	"dwi": "./input/dtiinit/dwi_aligned_trilin_noMEC.nii.gz",
-	"bvecs": "./input/dtiinit/dwi_aligned_trilin_noMEC.nii.bvecs",
-	"bvals": "./input/dtiinit/dwi_aligned_trilin_noMEC.nii.bvals",
-        "life_discretization": 360,
-        "num_iterations": 100
+        "segmentation": ".output.mat",
 }
 ```
 

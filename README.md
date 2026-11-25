@@ -2,6 +2,30 @@
 [![Run on Brainlife.io](https://img.shields.io/badge/Brainlife-bl.app.201-blue.svg)](https://doi.org/10.25663/brainlife.app.201)
 
 # app-convert-wmc2wmc
+
+<!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
+
+**Converts a deprecated white matter classification (wmc-deprecated, output.mat) into the current wmc datatype (classification.mat with tract JSONs and surfaces).**
+
+Saves the classification structure from the old output.mat as classification.mat, copies any surfaces, and rewrites the tract JSON files with coordinates rounded to two decimals. The new datatype stores only streamline indices, so it must be used together with the original tractogram. Use it to make old classifications usable by current Apps. Utility App.
+
+Run it on brainlife.io: [https://doi.org/10.25663/brainlife.app.201](https://doi.org/10.25663/brainlife.app.201)
+
+| Input | Datatype | Required | Description |
+|---|---|---|---|
+| `0` | `neuro/wmc-deprecated` | yes | Deprecated WMC classification (output.mat with tracts/ JSON files and optional surfaces/). |
+
+| Output | Datatype | Description |
+|---|---|---|
+| `wmc` | `neuro/wmc` | WMC classification (classification.mat with streamline indices, tracts/ JSONs and surfaces/). |
+
+Runtime: container `brainlife/python:2.7.16`; 1 CPUs; 0.08 h walltime.
+
+Please cite:
+- Avesani P. et al. The open diffusion data derivatives. Sci Data 6, 69 (2019). [doi:10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
+
+<!-- brainlife-app:end -->
+
 This App converts the White Matter Classification (WMC) structure deprecated datatype to the new WMC datatype. The main difference between the two datatypes is that, while the first one contains both the fiber indexes related to the original tractogram and the fiber coordinates (in the structure output.mat), the second one only contains the fiber indexes (in the structure classification.mat). For this reason, it is important that the new WMC datatype is always used in concomitance with the original tractogram. 
 
 ### Authors

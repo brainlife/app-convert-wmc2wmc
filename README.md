@@ -10,7 +10,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" alt="MIT license"></a>
 </p>
 
-## 🧠 At a glance
+## At a glance
 
 <!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
 
@@ -20,19 +20,19 @@ Saves the classification structure from the old output.mat as classification.mat
 
 | | |
 |---|---|
-| 📥 **Inputs** | `neuro/wmc-deprecated` |
-| 📤 **Outputs** | `neuro/wmc` |
-| 🐳 **Container** | `brainlife/python:2.7.16` |
-| ⚙️ **Resources** | 1 CPUs · 0.08 h walltime |
-| 🔗 **Run it** | [doi.org/10.25663/brainlife.app.201](https://doi.org/10.25663/brainlife.app.201) |
+| **Inputs** | `neuro/wmc-deprecated` |
+| **Outputs** | `neuro/wmc` |
+| **Container** | `brainlife/python:2.7.16` |
+| **Resources** | 1 CPUs · 0.08 h walltime |
+| **Run it** | [doi.org/10.25663/brainlife.app.201](https://doi.org/10.25663/brainlife.app.201) |
 
-#### 📥 Inputs
+#### Inputs
 
 | Input | Datatype | Required | Description |
 |---|---|---|---|
 | `0` | `neuro/wmc-deprecated` | yes | Deprecated WMC classification (output.mat with tracts/ JSON files and optional surfaces/). |
 
-#### 📤 Outputs
+#### Outputs
 
 | Output | Datatype | Description |
 |---|---|---|
@@ -40,15 +40,15 @@ Saves the classification structure from the old output.mat as classification.mat
 
 <!-- brainlife-app:end -->
 
-## 🚀 Running the App
+## Running the App
 
-### ☁️ On brainlife.io
+### On brainlife.io
 
 Open the App at [doi.org/10.25663/brainlife.app.201](https://doi.org/10.25663/brainlife.app.201), choose a `neuro/wmc-deprecated` dataset from your project and press **Execute**. The App archives a `neuro/wmc` dataset that current segmentation and tract-profile Apps can read.
 
 The two datatypes differ in what they store. The deprecated one holds both the streamline indices into the original tractogram and the streamline coordinates (in `output.mat`); the new one holds only the indices (in `classification.mat`). Always use the converted classification together with the original tractogram.
 
-### 💻 Locally
+### Locally
 
 You need [Singularity/Apptainer](https://apptainer.org/). The App runs Python 2.7 with SciPy from the `brainlife/python:2.7.16` container.
 
@@ -67,7 +67,7 @@ You need [Singularity/Apptainer](https://apptainer.org/). The App runs Python 2.
    ./main
    ```
 
-## 📦 Outputs
+## Outputs
 
 ```text
 wmc/
@@ -78,11 +78,11 @@ wmc/
 
 `names` lists the tracts identified; `index` is a vector with one entry per streamline of the original tractogram, zero for unassigned streamlines and otherwise the position of the streamline's tract in `names`.
 
-## 🩺 Troubleshooting
+## Troubleshooting
 
 - **`Conversion failed.`**: the `wmc` output directory is empty. Check that the input contains `output.mat` and `tracts/`.
 
-## 📚 Citing
+## Citing
 
 > [!TIP]
 > If you use this App in your work, please cite the App, the software it builds on and brainlife.io (below). GitHub's **Cite this repository** button gives the App citation in APA and BibTeX.
@@ -91,13 +91,13 @@ wmc/
 - Avesani P. et al. The open diffusion data derivatives. Sci Data 6, 69 (2019). [doi:10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
 - Hayashi S, Caron BA, Heinsfeld AS, et al. brainlife.io: a decentralized and open-source cloud platform to support neuroscience research. *Nature Methods* 21:809–813 (2024). [doi:10.1038/s41592-024-02237-2](https://doi.org/10.1038/s41592-024-02237-2)
 
-## 👥 Authors
+## Authors
 
 - Giulia Bertò
 
 **Contributors:** Soichi Hayashi
 
-## 💰 Funding
+## Funding
 
 [![Wellcome-226486/Z/22/Z](https://img.shields.io/badge/Wellcome-226486%2FZ%2F22%2FZ-purple.svg)](https://wellcome.org/)
 [![NIH-NINDS-U24NS140384](https://img.shields.io/badge/NIH_NINDS-U24NS140384-green.svg)](https://reporter.nih.gov/project-details/11261037)
@@ -116,6 +116,6 @@ wmc/
 
 <sub>brainlife.io is publicly funded, and acknowledging that support helps keep it running. This App was developed with support from Wellcome, the U.S. National Institutes of Health (including the BRAIN Initiative BRAIN CONNECTS program: The Axonal Projectome EXchange, U24NS140384, and the Center for Mesoscale Connectomics, UM1NS132207) and the U.S. National Science Foundation.</sub>
 
-## ⚖️ License
+## License
 
 MIT, Copyright (c) 2020 brainlife.io, The University of Texas at Austin and Indiana University.
